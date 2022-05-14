@@ -26,7 +26,7 @@ random_zhiza = ['и вправду жиза', '-я даун\n-жиза', 'сог
 random_hz = ['правильнее будет написать "не знаю"', 'жиза', 'правильнее будет написать "не известно"', 'правильнее будет написать "не имею такой информации"',]
 
 #ТОКЕН и различные переменные
-bot = telebot.TeleBot('5356298156:AAEtnQUiXF4R0wmkdh2FbibyXjSVIkaqP8Y')
+bot = telebot.TeleBot('YOUR TOKEN')
 send_time = lambda x: time.strftime("%H:%M:%S", time.localtime(x))
 
 #####################################
