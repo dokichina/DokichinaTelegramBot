@@ -45,11 +45,11 @@ def info(message):
 
 #####################################
 
-@bot.message_handler(commands=['son'])
+@bot.message_handler(commands=['###'])
 def son(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("Сообщение на ПК[CREATOR FUNC]")
-    btn2 = types.KeyboardButton("Сменить обои на ПК[CREATOR FUNC]")
+    btn1 = types.KeyboardButton("###")
+    btn2 = types.KeyboardButton("###")
     markup.add(btn1, btn2)
     send_time_realize = send_time(message.date)
     send_time_hours = int((send_time_realize[0:2]))
@@ -68,7 +68,7 @@ def son(message):
 
 @bot.message_handler(content_types=['text', 'photo'])
 def func(message):
-    if message.text == 'Сообщение на ПК[CREATOR FUNC]':
+    if message.text == '###':
         def next_message_sending(message):
             try:
                 pag.alert(message.text, "Сообщение")
@@ -77,7 +77,7 @@ def func(message):
 
         msg = bot.send_message(message.chat.id, "Введите ваше сообщение, которое желаете вывести на экран.")
         bot.register_next_step_handler(msg, next_message_sending)
-    elif message.text == 'Сменить обои на ПК[CREATOR FUNC]':
+    elif message.text == '###':
         def next_wallpaper(message):
             file = message.photo[-1].file_id
             file = bot.get_file(file)
